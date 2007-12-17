@@ -15,7 +15,6 @@ BuildRequires:	perl-devel
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	readline-devel >= 4.2
 Obsoletes:	perl-Term-Readline-Gnu
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is an implementation of the interface to the GNU Readline
