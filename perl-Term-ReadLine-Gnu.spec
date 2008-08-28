@@ -1,7 +1,8 @@
 %define module	Term-ReadLine-Gnu
 %define name	perl-%{module}
-%define version 1.16
-%define release %mkrel 7
+%define sversion 1.17
+%define version %{sversion}a
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -9,7 +10,7 @@ Release:	%{release}
 Summary:	Perl extension for the GNU Readline/History Library 
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term/ReadLine/%{module}-%{version}.tar.bz2
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term/ReadLine/%{module}-%{version}.tar.gz
 URL:		http://search.cpan.org/dist/%{module}
 BuildRequires:	perl-devel
 BuildRequires:	ncurses-devel >= 5.2
@@ -29,7 +30,7 @@ so on with Perl. This may be useful for prototyping before
 programming with C.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{sversion}
 chmod 644 README
 # Fix bogus dependency on /usr/local/bin/perl:
 perl -pi -e 's!/usr/local/bin/perl!/usr/bin/perl!g' Gnu/{euc_jp,XS}.pm
