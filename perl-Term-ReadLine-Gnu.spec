@@ -1,6 +1,6 @@
 %define module	Term-ReadLine-Gnu
 %define name	perl-%{module}
-%define version 1.18
+%define version 1.19
 %define release %mkrel 1
 
 Name:		%{name}
