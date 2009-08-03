@@ -1,21 +1,22 @@
-%define module	Term-ReadLine-Gnu
-%define name	perl-%{module}
-%define version 1.19
-%define release %mkrel 1
+%define upstream_name	 Term-ReadLine-Gnu
+%define upstream_version 1.19
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl extension for the GNU Readline/History Library 
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Term/%{module}-%{version}.tar.gz
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Term/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	ncurses-devel >= 5.2
+BuildRequires:	perl-devel
 BuildRequires:	readline-devel >= 4.2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 Obsoletes:	perl-Term-Readline-Gnu
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is an implementation of the interface to the GNU Readline
@@ -29,7 +30,7 @@ so on with Perl. This may be useful for prototyping before
 programming with C.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 README
 # Fix bogus dependency on /usr/local/bin/perl:
 perl -pi -e 's!/usr/local/bin/perl!/usr/bin/perl!g' Gnu/{euc_jp,XS}.pm
@@ -61,5 +62,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Term
 %{perl_vendorarch}/auto/Term
 %{_mandir}/*/*
-
-
