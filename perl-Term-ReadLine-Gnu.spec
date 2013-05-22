@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 7
+Release:    %mkrel 8
 
 Summary:	Perl extension for the GNU Readline/History Library 
 License:	GPL+ or Artistic
