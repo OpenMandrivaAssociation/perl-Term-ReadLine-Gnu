@@ -1,10 +1,10 @@
 %define modname	Term-ReadLine-Gnu
-%define modver	1.20
+%define modver 1.23
 
 Summary:	Perl extension for the GNU Readline/History Library 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	12
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -51,4 +51,5 @@ fi
 %{perl_vendorarch}/Term
 %{perl_vendorarch}/auto/Term
 %{_mandir}/man3/*
+
 
