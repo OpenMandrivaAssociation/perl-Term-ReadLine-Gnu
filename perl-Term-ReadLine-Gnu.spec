@@ -51,5 +51,7 @@ fi
 %{perl_vendorarch}/Term
 %{perl_vendorarch}/auto/Term
 %{_mandir}/man3/*
+%{_bindir}/perlsh
+%{_mandir}/man1/perlsh.1*
 
 
