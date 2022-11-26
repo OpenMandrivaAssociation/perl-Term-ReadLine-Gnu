@@ -1,16 +1,14 @@
+%undefine _debugsource_packages
 %define modname	Term-ReadLine-Gnu
-%define modver 1.24
 
 Summary:	Perl extension for the GNU Readline/History Library 
-
-
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	9
+Version:	1.44
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Term/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Term/%{modname}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	readline-devel >= 4.2
 BuildRequires:	pkgconfig(ncurses)
@@ -27,8 +25,7 @@ so on with Perl. This may be useful for prototyping before
 programming with C.
 
 %prep
-%setup -qn %{modname}-%{modver}
-chmod 644 README
+%autosetup -p1 -n %{modname}-%{version}
 # Fix bogus dependency on /usr/local/bin/perl:
 perl -pi -e 's!/usr/local/bin/perl!/usr/bin/perl!g' Gnu/{euc_jp,XS}.pm
 
@@ -49,7 +46,6 @@ fi
 %makeinstall_std
 
 %files
-%doc README
 %{perl_vendorarch}/Term
 %{perl_vendorarch}/auto/Term
 %{_mandir}/man3/*
