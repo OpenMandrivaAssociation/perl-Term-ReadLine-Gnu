@@ -3,7 +3,7 @@
 
 Summary:	Perl extension for the GNU Readline/History Library 
 Name:		perl-%{modname}
-Version:	1.44
+Version:	1.45
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
