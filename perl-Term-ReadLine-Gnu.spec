@@ -4,7 +4,7 @@
 Summary:	Perl extension for the GNU Readline/History Library 
 Name:		perl-%{modname}
 Version:	1.45
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
