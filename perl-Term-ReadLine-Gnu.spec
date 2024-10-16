@@ -7,7 +7,7 @@ Version:	1.46
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Term/%{modname}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	readline-devel >= 4.2
