@@ -3,8 +3,8 @@
 
 Summary:	Perl extension for the GNU Readline/History Library 
 Name:		perl-%{modname}
-Version:	1.46
-Release:	2
+Version:	1.47
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
@@ -26,7 +26,7 @@ so on with Perl. This may be useful for prototyping before
 programming with C.
 
 %prep
-%autosetup -p1 -n %{modname}-%{version}
+%autosetup -p1 -n Term-ReadLine-Gnu-1.47
 # Fix bogus dependency on /usr/local/bin/perl:
 perl -pi -e 's!/usr/local/bin/perl!/usr/bin/perl!g' Gnu/{euc_jp,XS}.pm
 
